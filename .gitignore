@@ -1,0 +1,47 @@
+# Angular / Node
+node_modules/
+dist/
+tmp/
+out-tsc/
+.angular/
+.angular-cache/
+coverage/
+*.tgz
+
+# Package manager / tooling logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Environment files
+.env
+.env.*
+
+# Java build outputs
+*.class
+*.log
+*.ctxt
+hs_err_pid*
+target/
+build/
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+.ruff_cache/
+pip-wheel-metadata/
+
+# IDE / OS junk
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+
