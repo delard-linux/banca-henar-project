@@ -19,27 +19,32 @@
 ## General Wizard Structure
 
 ### Progress Indicator
+
 - Must clearly indicate which step the user is on (1/3, 2/3, 3/3)
 - Visual progress bar showing completed and current steps
 
 ### Navigation Controls
 
 #### Next Button
+
 - **State:** Disabled until all mandatory fields in the current step are valid
 - **Action:** Advances to next step, persisting current data
 - **Label:** "Continue" (Steps 1-2) / "Finalize and Sign Contract" (Step 3)
 
 #### Back Button
+
 - **Visibility:** Steps 2-3 only
 - **Action:** Returns to previous step without losing data
 - **Label:** "Back"
 
 #### Save Draft Button
+
 - **Visibility:** Optional but recommended
 - **Action:** Saves current progress for later completion
 - **Label:** "Save Draft"
 
 #### Cancel Button
+
 - **Visibility:** All steps
 - **Action:** Exits wizard with confirmation dialog
 - **Label:** "Cancel"
@@ -88,10 +93,11 @@
 **Objective:** Establish the fiscal/operational headquarters and communication channels.
 
 ### UX Enhancement
+
 - **Google Places API Integration:** Optional address search helper at the top
 - On selection, auto-populate: Street Type, Street Name, Number, Zip, City, Province
 
-### Form Fields
+### Location Fields
 
 | Field | Component | Data Type | Size | Required | Validation Rules |
 |-------|-----------|-----------|------|----------|------------------|
@@ -109,7 +115,7 @@
 | **Confirm Email** | Input Email | Email | Max 100 | ✓ | • Must match Corporate Email exactly<br>• Disable paste functionality |
 | **Website** | Input URL | URL | Max 200 | ✗ | • Pattern: `^https?://.*`<br>• Validate reachable domain (optional) |
 
-### Business Rules
+### Address Validation Rules
 
 1. **Zip Code Autocomplete (Spain only):**
    - Maintain local zip code database
