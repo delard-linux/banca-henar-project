@@ -1,12 +1,12 @@
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-import { NgClass, NgFor, NgIf } from '@angular/common';
+import { NgIf } from '@angular/common';
 import { AuthService } from '../../core/services/auth.service';
 
 @Component({
   selector: 'app-dashboard-layout',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, RouterLinkActive, NgFor, NgIf, NgClass],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, NgIf],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <div class="min-h-screen bg-white text-slate-900">
@@ -92,6 +92,39 @@ import { AuthService } from '../../core/services/auth.service';
           </main>
         </section>
       </div>
+
+      <!-- Logout Confirmation Dialog -->
+      <div 
+        *ngIf="showLogoutConfirm()"
+        class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/50 backdrop-blur-sm"
+        (click)="cancelLogout()"
+      >
+        <div 
+          class="w-full max-w-md rounded-3xl border border-slate-200 bg-white p-8 shadow-2xl"
+          (click)="$event.stopPropagation()"
+        >
+          <h2 class="text-2xl font-semibold text-slate-900">Sign out</h2>
+          <p class="mt-3 text-slate-600">
+            Are you sure you want to sign out? You will need to enter your credentials again to access your account.
+          </p>
+          <div class="mt-6 flex gap-3">
+            <button
+              type="button"
+              (click)="cancelLogout()"
+              class="flex-1 rounded-2xl border border-slate-300 bg-white px-6 py-3 font-semibold text-slate-700 hover:bg-slate-50"
+            >
+              Cancel
+            </button>
+            <button
+              type="button"
+              (click)="confirmLogout()"
+              class="flex-1 rounded-2xl bg-primary-600 px-6 py-3 font-semibold text-white hover:bg-primary-700"
+            >
+              Sign out
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   `,
 })
@@ -101,10 +134,21 @@ export class DashboardLayoutComponent {
 
   readonly user = this.authService.user;
   readonly operationsOpen = signal(true);
+  readonly showLogoutConfirm = signal(false);
 
   handleLogout(): void {
+    // Show confirmation dialog
+    this.showLogoutConfirm.set(true);
+  }
+
+  confirmLogout(): void {
+    this.showLogoutConfirm.set(false);
     this.authService.logout();
     void this.router.navigate(['/home']);
+  }
+
+  cancelLogout(): void {
+    this.showLogoutConfirm.set(false);
   }
 
   toggleOperations(): void {
