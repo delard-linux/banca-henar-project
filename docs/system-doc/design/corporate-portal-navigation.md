@@ -27,8 +27,8 @@
   - "Solutions" (anchor to #solutions)
   - "Financing" (anchor to #financing)
   - "Help" (anchor to #help)
-- **Primary Button:** "Client Access" → Opens Login page/modal
-- **Secondary Button:** "Become a Client" → Direct access to Onboarding Wizard
+- **Secondary Button:** "Become a Client" → Direct access to Onboarding Wizard (`/create-account`)
+- **Primary Button:** "Client Access" → Opens Login page (`/auth/login`)
 
 **Technical Specs:**
 - Fixed/sticky header on scroll

@@ -5,17 +5,32 @@ This directory contains the functional specifications and design documentation f
 ## Documents
 
 ### 1. [Create Corporate Account](./create-corporate-account.md)
+
 Complete functional specification for the 3-step corporate onboarding wizard including:
+
 - Step 1: Corporate Identity and Activity
 - Step 2: Location and Contact
 - Step 3: Legal Representatives and Economic Data (KYC)
 
 ### 2. [Corporate Portal and Navigation](./corporate-portal-navigation.md)
+
 Specification for the portal structure including:
+
 - Public Landing Page
 - Authentication System (Login/Logout)
 - Private Dashboard Area
 - Navigation Menu Structure
+
+### 3. [Authentication System](./authentication-system.md)
+
+Complete specification for secure authentication and session management:
+
+- Login Screen (UI/UX and validation)
+- Logout Functionality
+- Session Management (JWT tokens, refresh mechanism)
+- Security Features (rate limiting, CSRF protection)
+- Route Guards and Access Control
+- Error Handling and Edge Cases
 
 ## Original Documentation
 
