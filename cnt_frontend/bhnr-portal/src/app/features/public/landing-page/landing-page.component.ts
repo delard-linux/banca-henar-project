@@ -43,7 +43,7 @@ import { RouterLink } from '@angular/router';
         </p>
         <div class="flex flex-col gap-3 sm:flex-row">
           <a
-            routerLink="/app/onboarding/create-account"
+            routerLink="/create-account"
             class="inline-flex items-center justify-center rounded-2xl bg-primary-600 px-6 py-3 font-semibold text-white shadow-elevated transition hover:bg-primary-700"
           >
             Crear cuenta empresa

@@ -23,7 +23,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             </nav>
             <div class="flex items-center gap-2">
               <a
-                routerLink="/app/onboarding/create-account"
+                routerLink="/create-account"
                 class="rounded-full border border-primary-200 px-4 py-2 text-sm font-semibold text-primary-700 hover:bg-primary-50 transition"
               >
                 Hazte cliente

@@ -44,7 +44,7 @@ import { AuthService } from '../../core/services/auth.service';
               </button>
               <div class="mt-2 space-y-2 pl-7" *ngIf="operationsOpen()">
                 <a
-                  routerLink="/app/onboarding/create-account"
+                  routerLink="/create-account"
                   routerLinkActive="text-primary-800 font-semibold"
                   class="block rounded-lg px-3 py-2 text-slate-700 hover:bg-primary-50 hover:text-primary-800"
                 >

@@ -24,5 +24,9 @@ export const PUBLIC_ROUTES: Routes = [
       },
     ],
   },
+  {
+    path: 'create-account',
+    loadComponent: () => import('../onboarding/onboarding.component').then((m) => m.OnboardingComponent),
+  },
 ];
 
