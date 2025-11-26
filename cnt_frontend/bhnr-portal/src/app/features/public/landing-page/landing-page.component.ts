@@ -18,7 +18,7 @@ import { RouterLink } from '@angular/router';
             <p class="mt-4 text-2xl font-semibold text-slate-900">Intelligent Panel</p>
             <p class="mt-2 text-slate-600">Real-time tracking of treasury, active financing and alerts.</p>
           </div>
-          <img src="/bhnr_logo.png" alt="BHNR" class="h-12 w-auto object-contain" />
+          <img src="/bhnr_logo.png" alt="BHNR" class="h-20 w-auto object-contain" />
         </div>
         <div class="mt-8 grid gap-4 md:grid-cols-2">
           <div class="rounded-2xl border border-slate-200 bg-white p-5">

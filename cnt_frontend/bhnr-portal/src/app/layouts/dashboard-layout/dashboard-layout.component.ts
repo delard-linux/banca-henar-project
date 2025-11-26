@@ -12,8 +12,8 @@ import { AuthService } from '../../core/services/auth.service';
     <div class="min-h-screen bg-white text-slate-900">
       <div class="flex">
         <aside class="hidden w-72 flex-shrink-0 border-r border-slate-200 bg-white p-6 md:block">
-          <div class="mb-10 flex items-center gap-3">
-            <img src="/bhnr_logo_solo_p.png" alt="BHNR" class="h-8 w-8 object-contain" />
+          <div class="mb-10">
+            <img src="/bhnr_logo.png" alt="BHNR" class="mb-3 w-48 object-contain" />
             <p class="text-lg font-semibold text-primary-800">Banca Henar Business</p>
           </div>
 
