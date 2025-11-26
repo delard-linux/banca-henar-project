@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply font-sans bg-white text-slate-900 antialiased min-h-screen;
+}
+
+a {
+  @apply text-primary-700 hover:text-primary-900 transition-colors;
+}
+
+.container-responsive {
+  @apply max-w-6xl mx-auto px-6;
+}
