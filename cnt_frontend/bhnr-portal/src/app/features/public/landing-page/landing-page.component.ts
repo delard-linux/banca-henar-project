@@ -14,39 +14,39 @@ import { RouterLink } from '@angular/router';
       <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-elevated lg:flex-1 relative z-10 order-2 lg:order-1">
         <div class="flex items-start justify-between gap-4">
           <div class="flex-1">
-            <p class="text-sm uppercase tracking-[0.4em] text-slate-500">Gestión corporativa</p>
-            <p class="mt-4 text-2xl font-semibold text-slate-900">Panel inteligente</p>
-            <p class="mt-2 text-slate-600">Seguimiento en tiempo real de tesorería, financiación activa y alertas.</p>
+            <p class="text-sm uppercase tracking-[0.4em] text-slate-500">Corporate Management</p>
+            <p class="mt-4 text-2xl font-semibold text-slate-900">Intelligent Panel</p>
+            <p class="mt-2 text-slate-600">Real-time tracking of treasury, active financing and alerts.</p>
           </div>
           <img src="/bhnr_logo.png" alt="BHNR" class="h-12 w-auto object-contain" />
         </div>
         <div class="mt-8 grid gap-4 md:grid-cols-2">
           <div class="rounded-2xl border border-slate-200 bg-white p-5">
             <p class="text-xs uppercase tracking-[0.3em] text-slate-500">Liquidity</p>
-            <p class="mt-2 text-3xl font-semibold text-primary-600">€4,2M</p>
-            <p class="text-sm text-slate-600">Disponible inmediato</p>
+            <p class="mt-2 text-3xl font-semibold text-primary-600">€4.2M</p>
+            <p class="text-sm text-slate-600">Available immediately</p>
           </div>
           <div class="rounded-2xl border border-slate-200 bg-white p-5">
             <p class="text-xs uppercase tracking-[0.3em] text-slate-500">Financing</p>
-            <p class="mt-2 text-3xl font-semibold text-primary-600">12 proyectos</p>
-            <p class="text-sm text-slate-600">Activos con seguimiento</p>
+            <p class="mt-2 text-3xl font-semibold text-primary-600">12 projects</p>
+            <p class="text-sm text-slate-600">Active with tracking</p>
           </div>
         </div>
       </div>
       <div class="space-y-6 lg:flex-1 order-1 lg:order-2 lg:mt-48">
         <h1 class="text-xl font-bold leading-tight text-slate-950 md:text-2xl">
-          Potencia tu negocio con Banca Henar
+          Empower your business with Banca Henar
         </h1>
         <p class="text-xl md:text-2xl text-slate-800 leading-relaxed">
-          Soluciones financieras ágiles y diseñadas para compañías que no se detienen. Gestiona tus operaciones 100% online
-          con asesoramiento experto en pymes y corporates.
+          Agile financial solutions designed for companies that never stop. Manage your operations 100% online
+          with expert advice for SMEs and corporates.
         </p>
         <div class="flex flex-col gap-3 sm:flex-row">
           <a
             routerLink="/create-account"
             class="inline-flex items-center justify-center rounded-2xl bg-primary-600 px-6 py-3 font-semibold text-white shadow-elevated transition hover:bg-primary-700"
           >
-            Crear cuenta empresa
+            Create business account
           </a>
         </div>
       </div>
@@ -67,15 +67,15 @@ import { RouterLink } from '@angular/router';
       <div class="rounded-3xl border border-primary-100 bg-primary-50 p-10 shadow-elevated">
         <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
           <div>
-            <p class="text-sm uppercase tracking-[0.4em] text-primary-700">Acompañamiento experto</p>
-            <h2 class="mt-3 text-3xl font-semibold text-slate-900">¿Necesitas asesoramiento dedicado?</h2>
-            <p class="mt-2 text-slate-700">Nuestro equipo corporate responde en menos de 4 horas hábiles.</p>
+            <p class="text-sm uppercase tracking-[0.4em] text-primary-700">Expert support</p>
+            <h2 class="mt-3 text-3xl font-semibold text-slate-900">Need dedicated advice?</h2>
+            <p class="mt-2 text-slate-700">Our corporate team responds in less than 4 business hours.</p>
           </div>
           <a
             href="mailto:corporate@bhnr.com"
             class="inline-flex items-center justify-center rounded-2xl bg-primary-600 px-6 py-3 font-semibold text-white hover:bg-primary-700"
           >
-            Contactar equipo BHNR
+            Contact BHNR team
           </a>
         </div>
       </div>
@@ -85,19 +85,19 @@ import { RouterLink } from '@angular/router';
 export class LandingPageComponent {
   readonly benefits = [
     {
-      tag: 'Gestión',
-      title: '100% gestión online',
-      description: 'Firma digital, autorizaciones multiusuario y flujos aprobatorios configurables.',
+      tag: 'Management',
+      title: '100% online management',
+      description: 'Digital signature, multi-user authorizations and configurable approval workflows.',
     },
     {
-      tag: 'Financiación',
-      title: 'Financiación a medida',
-      description: 'Líneas para circulante, avales internacionales y project finance con decisión ágil.',
+      tag: 'Financing',
+      title: 'Customized financing',
+      description: 'Working capital lines, international guarantees and project finance with agile decision-making.',
     },
     {
       tag: 'Expertise',
-      title: 'Expertos en pymes y midcorp',
-      description: 'Equipo especializado por sector que entiende la operativa de tu negocio.',
+      title: 'SME and midcorp experts',
+      description: 'Sector-specialized team that understands your business operations.',
     },
   ];
 }

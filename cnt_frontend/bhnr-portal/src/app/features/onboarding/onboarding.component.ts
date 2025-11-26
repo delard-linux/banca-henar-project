@@ -14,7 +14,7 @@ import { NgIf, NgFor } from '@angular/common';
         <!-- Header -->
         <div class="mb-6">
           <div class="mb-3 flex items-center justify-between">
-            <p class="text-xs uppercase tracking-[0.3em] text-slate-500">Paso 1 de 3</p>
+            <p class="text-xs uppercase tracking-[0.3em] text-slate-500">Step 1 of 3</p>
             <div class="flex gap-2">
               <div class="h-2 w-12 rounded-full bg-primary-600"></div>
               <div class="h-2 w-12 rounded-full bg-slate-200"></div>
@@ -22,7 +22,7 @@ import { NgIf, NgFor } from '@angular/common';
             </div>
           </div>
           <h1 class="text-2xl font-bold text-slate-900">Create Corporate Account</h1>
-          <p class="mt-1 text-sm text-slate-600">Completa los datos básicos de tu empresa para iniciar el proceso de alta.</p>
+          <p class="mt-1 text-sm text-slate-600">Complete your company's basic information to start the registration process.</p>
         </div>
 
         <!-- Form -->
@@ -39,7 +39,7 @@ import { NgIf, NgFor } from '@angular/common';
                 placeholder="Acme Corporation S.L."
               />
               <p class="mt-1 text-xs text-rose-600" *ngIf="shouldShowError('companyName')">
-                El nombre de la empresa es obligatorio.
+                Company name is required.
               </p>
             </div>
 
@@ -53,7 +53,7 @@ import { NgIf, NgFor } from '@angular/common';
                 placeholder="B12345678"
               />
               <p class="mt-1 text-xs text-rose-600" *ngIf="shouldShowError('taxId')">
-                El CIF/NIF es obligatorio (mínimo 9 caracteres).
+                Tax ID is required (minimum 9 characters).
               </p>
             </div>
 
@@ -67,7 +67,7 @@ import { NgIf, NgFor } from '@angular/common';
                 placeholder="contact@acme.com"
               />
               <p class="mt-1 text-xs text-rose-600" *ngIf="shouldShowError('email')">
-                Introduce un email corporativo válido.
+                Please enter a valid corporate email.
               </p>
             </div>
 
@@ -81,7 +81,7 @@ import { NgIf, NgFor } from '@angular/common';
                 placeholder="+34 912 345 678"
               />
               <p class="mt-1 text-xs text-rose-600" *ngIf="shouldShowError('phone')">
-                El teléfono es obligatorio.
+                Phone number is required.
               </p>
             </div>
 
@@ -92,13 +92,13 @@ import { NgIf, NgFor } from '@angular/common';
                 formControlName="industry"
                 class="mt-1.5 w-full rounded-2xl border border-slate-300 bg-white px-4 py-2.5 text-slate-900 focus:border-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-600/20"
               >
-                <option value="" disabled>Selecciona un sector</option>
+                <option value="" disabled>Select an industry</option>
                 @for (sector of sectors; track sector) {
                   <option [value]="sector">{{ sector }}</option>
                 }
               </select>
               <p class="mt-1 text-xs text-rose-600" *ngIf="shouldShowError('industry')">
-                Selecciona el sector de tu empresa.
+                Please select your company's industry.
               </p>
             </div>
           </div>
@@ -112,12 +112,12 @@ import { NgIf, NgFor } from '@angular/common';
                 class="mt-0.5 h-4 w-4 rounded border-slate-300 text-primary-600 focus:ring-primary-600"
               />
               <span>
-                Acepto los <a href="#" class="font-semibold text-primary-700 hover:underline">términos y condiciones</a> y la
-                <a href="#" class="font-semibold text-primary-700 hover:underline">política de privacidad</a> de Banca Henar Empresas.
+                I accept the <a href="#" class="font-semibold text-primary-700 hover:underline">terms and conditions</a> and
+                <a href="#" class="font-semibold text-primary-700 hover:underline">privacy policy</a> of Banca Henar Empresas.
               </span>
             </label>
             <p class="mt-1 text-xs text-rose-600" *ngIf="shouldShowError('acceptTerms')">
-              Debes aceptar los términos para continuar.
+              You must accept the terms to continue.
             </p>
           </div>
 
@@ -128,14 +128,14 @@ import { NgIf, NgFor } from '@angular/common';
               (click)="handleCancel()"
               class="rounded-2xl border border-slate-300 px-6 py-2.5 font-semibold text-slate-700 transition hover:bg-slate-50"
             >
-              Cancelar
+              Cancel
             </button>
             <button
               type="submit"
               [disabled]="form.invalid || isSubmitting()"
               class="rounded-2xl bg-primary-600 px-6 py-2.5 font-semibold text-white transition hover:bg-primary-700 disabled:cursor-not-allowed disabled:bg-slate-300 disabled:text-slate-500"
             >
-              {{ isSubmitting() ? 'Procesando...' : 'Continuar' }}
+              {{ isSubmitting() ? 'Processing...' : 'Continue' }}
             </button>
           </div>
         </form>
@@ -151,17 +151,17 @@ export class OnboardingComponent {
   readonly isSubmitting = signal(false);
 
   readonly sectors = [
-    'Tecnología',
-    'Comercio',
-    'Servicios profesionales',
-    'Manufactura',
-    'Construcción',
-    'Hostelería y turismo',
-    'Salud',
-    'Educación',
-    'Transporte y logística',
-    'Finanzas',
-    'Otros',
+    'Technology',
+    'Retail',
+    'Professional Services',
+    'Manufacturing',
+    'Construction',
+    'Hospitality & Tourism',
+    'Healthcare',
+    'Education',
+    'Transportation & Logistics',
+    'Finance',
+    'Other',
   ];
 
   private buildForm() {
