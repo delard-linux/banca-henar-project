@@ -12,7 +12,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
         <div class="container-responsive flex flex-col gap-4 py-5 md:flex-row md:items-center md:justify-between">
           <a routerLink="/home" class="flex items-center gap-3 font-semibold tracking-wide text-lg">
             <img src="/bhnr_logo_solo_p.png" alt="Banca Henar" class="h-10 w-10 object-contain" />
-            <span class="text-primary-800">Banca Henar Empresas</span>
+            <span class="text-primary-800">Banca Henar for Business</span>
           </a>
 
           <div class="flex flex-1 flex-col gap-4 md:flex-row md:items-center md:justify-end">

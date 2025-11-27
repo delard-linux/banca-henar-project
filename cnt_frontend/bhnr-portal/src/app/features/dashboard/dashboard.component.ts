@@ -1,10 +1,9 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [NgFor],
+  imports: [],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <section class="container-responsive space-y-10 text-slate-900">
